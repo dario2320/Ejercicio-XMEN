@@ -1,5 +1,8 @@
 package com.adn.service.funciones;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class ModelaMatriz {
 	
 	public int Ordena(String[]dna){
@@ -9,18 +12,23 @@ public class ModelaMatriz {
 		int j;
 		int total = 0;
 		for(i=0;  dna.length > i; i++){
-			System.out.println(i + "i");
+			
 			for(j=0; dna.length > j; j++){
-				//System.out.println(i + "i2");
-				System.out.println(j+"j");
+				switch (dna[i].charAt(j)){
+				case 'A': return 0;
+				case 'C': break;
+				case 'G': break;
+				case 'T': break;
+				default: return 0;
+				}
 				dnaO[i][j] = dna[i].charAt(j);
 				dnaV[i][j] = dna[j].charAt(i);
-			total = total + analisisM(dnaO,dna.length)+analisisM(dnaV,dna.length)+
-					analisisMatrizD(dnaO, dna.length, 0, 0) + analisisMatrizD(dnaV, dna.length, 1, 1)+
-					analisisMatrizDI(dnaO, dna.length, 0, dna.length-1)+analisisMatrizDI(dnaV, dna.length, 0, dna.length-1);	
 			
 			}
 			}
+		total = total + analisisM(dnaO,dna.length)+analisisM(dnaV,dna.length)+
+				analisisMatrizD(dnaO, dna.length, 0, 0) + analisisMatrizD(dnaV, dna.length, 1, 1)+
+				analisisMatrizDI(dnaO, dna.length, 0, dna.length-1)+analisisMatrizDI(dnaV, dna.length, 0, dna.length-1);	
 		
 		
 		return total;

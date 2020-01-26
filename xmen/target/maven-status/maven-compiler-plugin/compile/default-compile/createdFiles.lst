@@ -1,0 +1,8 @@
+com\adn\service\interfaces\EstadisticaRepository.class
+com\adn\service\interfaces\EstadisticaServiceImpl.class
+com\adn\service\interfaces\EstadisticaService.class
+com\adn\service\beans\Mutant.class
+com\adn\service\funciones\ModelaMatriz.class
+com\adn\service\main\XmenApplication.class
+com\adn\service\entidades\Estadistica.class
+com\adn\service\controllers\MutantController.class
